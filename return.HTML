@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv = "refresh" content = "5; url = schedule.HTML">
+<title>WAIT</title>
+<script language = "javascript">
+             function nine()
+		{
+			if(x.style.pixelWidth < 270) 	
+                                    {
+				x.style.pixelWidth += 3;
+				x.style.pixelHeight += 2; 
+				setTimeout("nine()",50); 
+			}
+		}
+
+</script>
+<style type = "text/css">
+
+body{margin-top: 100; background-color: #003E00; background-image: url("clock.jpg"); background-repeat: no-repeat; background-position: 50% 50%}
+div{width : 160pt; height : 160pt; font-size: 1050%}
+.name1{
+z-index: 1;
+position: absolute; top: 200pt; 
+left: 100pt; background-color: #ECF8E0}
+
+.name2{
+z-index: 4;
+position: static; top: 100pt;
+left: 140pt; background-color: #E0F8F7}
+
+.name3{
+z-index: 2;
+position: absolute; top: 110pt;
+left: 250pt; background-color: #CED8F6}
+
+.name4{
+z-index: 3;
+position: relative; top: 80pt;
+left: 140pt; background-color: #F2E0F7}
+
+</style>
+</head>
+
+<body onLoad = "nine()">
+<center>
+ <div class = "name1" id = "x"><font color = "red">꼭</font></div>
+ <div class = "name2"> 세 </div>
+ <div class = "name3"> 보 </div>
+ <div class = "name4"> 요 </div>
+</center>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<html>
+<head>
+<TITLE>블록체인을 바라보는 시선들</TITLE>	
+
+<SCRIPT LANGUAGE="JavaScript">
+
+		var intNo = 8; 
+		var xp, yp; 
+		var i;
+                        var intWidth = 1200, intHeight = 1000; 
+		var Multiple=5;
+		
+		xp = new Array();
+		yp = new Array();
+		
+		for (i = 0; i < intNo; ++ i)
+		{
+		    xp[i] = Math.random()*(intWidth-25); 
+		    yp[i] = Math.random()*intHeight;
+		
+		    document.write("<DIV ID=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +
+		          "; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"> <IMG SRC=\"down.gif\" border=\"0\"></DIV>");
+		}
+		
+		function block()
+		{
+	            for (i = 0; i < intNo; ++ i)
+		{
+		xp[i] += (Math.random()-0.5)*Multiple;
+		yp[i] += (Math.random())*Multiple/2;
+	         		if (yp[i] > intHeight)
+			{
+	        		xp[i] = Math.random()*(intWidth-25);
+	        		yp[i] = 0;
+			}
+      		document.all["dot"+i].style.pixelTop = yp[i];
+    	  	document.all["dot"+i].style.pixelLeft = xp[i];
+		}
+	            setTimeout("block()", 20);
+		}
+		
+		block();
+
+	</SCRIPT> 
+
+
+<style type = "text/css">
+	body{margin-top: 60; background-color: black; background-image: url("3a.jpg"); background-repeat: no-repeat; background-position: 50% 50%; color: white}
+	.font1{font-size: 300%; font-weight: bold; font-style: oblique; color: #0489B1; text-align: center}
+</style>
+</head>
+
+<body>
+<p class = "font1">블록체인을 바라보는 시선들 </p> 
+<br><br>
+
+<marquee direction = "right" width = "500" behavior = "alternate" scrolldelay = "10"> 비트코인 전망 </marquee>
+<br><br>
+<marquee direction = "right" scrollamount = "10" > 저장방식 혁신 </marquee>
+<br><br>
+<marquee direction = "left" scrollamount = "50"> 금융산업 </marquee>
+<br><br>
+<marquee direction = "right" scrolldelay ="1" scrollamount = "30"> 왜 블록체인이지 </marquee>
+<br><br>
+<marquee direction = "left" scrolldelay ="1" scrollamount = "20"> 그것이 꼭 필요할까 </marquee>
+<br><br>
+
+<marquee direction = "right" bgcolor = "#04B4AE" vspace = "30" hspace = "15" ><a href = "explain1.HTML"> 왜 블록체인이 주목받는 기술일까? (클릭!) </a></marquee>
+
+<br><br>
+<marquee direction = "right" scrolldelay ="15" scrollamount = "40"> ICT기술과의 접목 </marquee>
+<br><br>
+<marquee direction = "left" scrolldelay ="1" scrollamount = "30"> 과연 문제점은 없을까 </marquee>
+<br><br>
+<marquee direction = "right" scrolldelay ="1" scrollamount = "90"> 투명하겠구나 </marquee>
+<br><br>
+<marquee direction = "left" scrolldelay ="1" scrollamount = "15"> 분산형 데이터 저장기술 </marquee>
+<br><br>
+<marquee direction = "right" scrolldelay ="1" scrollamount = "25"> 활동분야는 어느정도일까 </marquee>
+
+</body>
+</html>
