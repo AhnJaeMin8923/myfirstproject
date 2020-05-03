@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>어서오세요</title>
+<style type="text/css">
+	body { background-image: url("0.jpeg");}
+	.name1{color: BLUE; font-size: 35; font-weight: 600; text-align: center; text-transform : capitalize}
+</style>
+<script language = "javascript">
+		var rate = 500;
+		
+		var Color1 = "#FF0000";
+		var Color2 = "#FF8000";
+		var Color3 = "#F4FA58";
+	            var Color4 = "#21610B";
+		var Color5 = "#4000FF";
+		var Color6 = "#380B61";
+		
+		var i=0;
+		
+		function LinkColor()
+                        {
+    		     i++;
+		     if (i==1) C = Color1;
+ 		     if (i==2) C = Color2;
+ 		     if (i==3) C = Color3;
+		     if (i==4) C = Color4;
+ 		     if (i==5) C = Color5;
+ 		     if (i==6) C = Color6;
+ 
+  
+           
+		      BannerLink.style.color=C;
+		      if (i > 5) i = 0;
+		      setTimeout("LinkColor()", rate);    
+		}
+
+</script>
+</head>
+
+<body onLoad="LinkColor()">
+<a name = "bannerlink" id = "BannerLink" href="https://blog.naver.com/ahn8923" target = _top class = "text">
+<MARQUEE DIRECTION="left" BEHAVIOR="alternate" SCROLLDELAY="5"><font CLASS = "name1">welcome to jaemin's homepage </font></marquee>
+</a>
+</body>
+</html>

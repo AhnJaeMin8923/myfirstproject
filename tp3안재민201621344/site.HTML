@@ -1,0 +1,91 @@
+<html>
+<head>
+	<TITLE> 사이트소개 </TITLE>
+<style type = "text/css">
+	BODY {background-image: url("2a.jpg"); margin-top: 60; margin-left: 50; margin-right: 50; color: #FFE08C}
+	center {font-size: 13pt; font-weight: bold; color: lightblue}
+
+	.font1 {color: #FFE400; font-size: 300%; font-family: fantasy; font-weight: bold; line-height: 110%; text-align: center; text-decoration: blink; letter-spacing: 10pt}
+	.font2 {color: #FF5E00; font-size: 200%; font-family: cursive; font-weight: bold; line-height: 120%; text-align: left; text-decoration: none; word-spacing: 10pt}
+	.font3 {color: #FFA648; font-size: 140%; font-family: cursive; font-weight: bold; line-height: 130%; text-align: left; text-decoration: none; word-spacing: 10pt}
+
+	.name1 {list-style-image: url("icon.jpg")}
+	.name2 {list-style-type: upper-roman}
+</style>
+<script language='javascript''>
+function imageview(value)
+{
+    switch(value)
+    {
+        case 'news1':
+            var tags="<img src='news1.png'"+"width='300'"+"height='300'"+"onmouseover='sizeup(event,1,this)'"+"onmouseout='sizeup(event,2,this)'>"
+            document.getElementById("imgV").innerHTML=tags;
+            break;
+        case 'news2':
+            var tags="<img src='news2.png'"+"width='300'"+"height='300'"+"onmouseover='sizeup(event,1,this)'"+"onmouseout='sizeup(event,2,this)'>"
+            document.getElementById("imgV").innerHTML=tags;
+            break;
+        case 'news3':
+            var tags="<img src='news3.png'"+"width='300'"+"height='300'"+"onmouseover='sizeup(event,1,this)'"+"onmouseout='sizeup(event,2,this)'>"
+            document.getElementById("imgV").innerHTML=tags;
+            break;
+    }
+}
+
+function sizeup(e,type,obj)
+{
+    if(window.event) e = window.event;
+    var width = Number(obj.width);
+    var height = Number(obj.height);
+    if(type==1)
+    {
+        obj.width   = (width * 2);
+        obj.height  = (height * 2);
+    }
+    else if(type==2)
+    {
+        obj.width   = (width / 2);
+        obj.height  = (height / 2);
+    }
+}
+
+
+</script>
+</head>
+
+<body>
+	<p class = "font1"> 블록체인지에 대해 알아보자</p><BR><BR>
+	<a href = "index.html">
+		<img src = "click2.jpg" width = "150" height = "150" align = "right" vspace = "100" hspace = "100" onMouseover = "Mouseover(this, 'silver')">
+	</a>
+	<p class = "font2">홈페이지 구성</p>
+
+	<UL class = "name1"><LI class = "font3"> 사이트 선정이유 </LI></UL>
+		<OL class = "name2">
+			<LI> 비트코인(암호화페)의 전망에 있어 궁금중!</LI><BR>
+			<LI> 블록체인지 기술이 계속적으로 주목받는 이유에 대해 알고 싶어서! </LI><BR>
+		</OL>
+ 	<UL class = "name1"><LI class = "font3"> 목차 </LI></UL>
+ 		<OL  class = "name2">
+			<LI> 블록체인지란?</LI><BR>
+ 			<LI> 블록체인의 기초 개념 4가지</LI><BR>
+ 			<LI> 블록체인이 앞으로 가져올 변화들</LI><BR><BR>
+		</OL>
+
+블록체인과 관련한 최근 TOP3 NEWS3 : 
+
+&nbsp;<input type="button", value="news1", onclick="imageview(value)">
+<input type="button", value="news2", onclick="imageview(value)">
+<input type="button", value="news3", onclick="imageview(value)"><br>
+<p id="imgV"></p>
+
+<br><br>
+
+<center>
+	<a href = "menu2-2.HTML">자기소개</a>&nbsp;&nbsp;&nbsp;
+	<a href = "go.HTML">시간표<a>&nbsp;&nbsp;&nbsp;
+	사이트소개
+</center>
+
+</body>
+</html>

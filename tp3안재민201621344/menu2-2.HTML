@@ -1,0 +1,147 @@
+<html>
+<head>
+	<TITLE> 자기소개 </TITLE>
+<script language = "javascript">
+
+	            var i=0;
+		var Color1 = "#58FAF4";
+		var Color2 = "#F7FE2E";
+		var Color3 = "#04B431";
+
+		function noba()
+                        {
+    		     i++;
+		     if (i==1) C = Color1;
+ 		     if (i==2) C = Color2;
+ 		     if (i==3) C = Color3;
+           
+           
+		      y.style.color=C;
+		      if (i > 2) i = 0;
+		      setTimeout("noba()", 220);    
+		}
+
+		function nine()
+		{
+			var today = new Date();
+			var ampm = "PM" 
+			var Hour = today.getHours();
+			var Minutes = today.getMinutes();
+			var Month = today.getMonth()+1;
+			if(Hour >= 12)
+			{
+				Hour = Hour - 12; 
+				ampm = "PM"
+			}
+			else
+				ampm = "AM"
+
+			if(Minutes < 10)
+			Minutes = 0 + Minutes;
+
+			Hour = (Hour == 0) ? 12 : Hour;
+
+			alert(""+today.getFullYear()+"년 "+Month+"월 "+today.getDate()+"일\n"
+			+Hour+"시 "+today.getMinutes()+"분 "+today.getSeconds()+"초에 방문하셨습니다.");
+		}
+
+                        function getCookie(name)
+		{
+		var cookname = name + "="; 
+		var dc = document.cookie; 
+		if (dc.length > 0) 
+			{
+		     begin = dc.indexOf(cookname);
+		        if (begin != -1) 
+			  {
+		           begin += cookname.length; 
+		           end = dc.indexOf(";", begin);
+		           if (end == -1) end = dc.length;
+		           return unescape(dc.substring(begin, end));
+			  }
+			}
+		  return null; 
+		}
+
+</script>
+
+<style type = "text/css">
+	BODY {background-image: url("4a.jpg"); margin: 5%; color: #F5D0A9}
+	center {font-size: 13pt; font-weight: bold; color: lightblue}
+
+	.font0 {font-size: 40pt; font-family: cursive; font-weight: bold; line-height: 130%; text-align: center; text-decoration: underline} 
+	.font1 {font-size: 20pt; font-family: 궁서체; font-weight: bold; text-align: left; color: #F3F781}
+	.font2 {font-size: 15pt; font-family: 돋움체; font-weight: 600; text-align: left}
+
+	.name1 {list-style-type: square; text-align: left}
+
+	div {border: solid; background-color: #D941C5}
+	.name2 { border-width: thick; border-style: dotted}
+</style>
+</head>
+
+<BODY onload = "nine(), noba()"><bgsound src = "music.mp3" loop = "infinite">
+
+	<P CLASS = "font0"> &lt   자기 소개   &gt </P>
+	<div class = "name2" id = "y">&nbsp;&nbsp;&nbsp;사이트에 추가되었으면 하는 부분이 있으면 문자 및 이메일로 소중한 의견 부탁드립니다. </div><br>	
+            <IMG SRC = "jaemin.jpg" weight = "250" height = "250" align = "right" HSPACE="10" VSPACE="10">            
+           
+            <p class = "font1"> 이름 : 안재민</p>
+            <p class = "font2">
+	생년월일 : 1997년 2월 18일<BR>
+	나이 : 23살<BR>
+	주소 : 서울특별시 마포구 서교동 247-68, 501호<BR>
+            전화번호 : 010-3438-5251 <BR>
+	이메일 : ahn8923@naver.com<BR><BR>
+
+	혈액형 : O형 <BR>
+            취미 : 접해보지 못한 다양한 영상을 담은 유튜브 영상 보기<BR>
+            특기 : 닭볶음탕 만들기<BR>	
+            가족사항 : 아버지, 어머니, 남동생, 나</FONT><BR>
+            병역여부 : 5사단 36연대 GOP 만기전역<BR></P>
+
+            <p class = "font1">학력사항</p>
+	<UL CLASS = "name1">
+		<LI> 소안초등학교 2010년 졸업
+		<LI> 일신중학교 2013년 졸업
+		<LI> 일신고등학교 2016년 졸업
+		<LI> 건국대학교 2016년 입학
+	</UL>
+<br><br><br>
+<script language="javascript">
+                        today = new Date();
+		var Hours = today.getHours();
+         
+		if(Hours<"6")
+			document.write("<center><b>늦게도 공부하는 그대, 존경합니다.</b></center>");
+		else if(Hours<"12")
+			document.write("<center><b>오늘도 화이팅입니다.</center></b>");
+		else if(Hours<"13")
+			document.write("<center><b>점심시간때도 틈틈히 공부하는 그대, 존경합니다.</b></center>");
+		else if(Hours<"18")
+			document.write("<center><b>오늘도 화이팅입니다.</b></center>");
+		else if(Hours<"24")
+			document.write("<center><b>늦은시간까지의 공부는 안 좋습니다.</b></center>");
+		
+		document.write("<br>");
+
+		var myday = new Date();
+		myday.setTime(myday.getTime() +  (365 * 24 * 60 * 60 * 1000));
+		if(!(CookieCounter = getCookie("CookieCounter"))) CookieCounter = 0;
+		CookieCounter++;
+		document.write("<font face = '궁서체'>" + "<center>" + "제 홈페이지에" 
+                                             + "<font color = 'red'>" + CookieCounter + "</font>"+"번째 방문하셨습니다. "+
+                                             "</font>" + "</center>");
+		setCookie("CookieCounter", CookieCounter, myday);
+		
+</script>
+
+<center>
+<br>
+자기소개&nbsp;&nbsp;&nbsp;
+<A HREF = "go.HTML">시간표</A>&nbsp;&nbsp;&nbsp;
+<A HREF = "site.HTML">사이트소개</A>
+</center>
+
+</body>
+</html>

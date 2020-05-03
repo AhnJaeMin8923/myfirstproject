@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+<title> 상담 </title>
+</head>
+
+<body background = "7a.jpg" TOPMARGIN="120" LEFTMARGIN="50" RIGHTMARGIN= "50">
+
+	<script language="javascript">
+		var strName;
+		strName = prompt("이름을 입력하세요", "상담을 원하시는 분들만 적어주세요")	
+	</script>
+            <form action = "index.html" method = "post">
+	<table bgcolor ="#E6E6E6" width="600" height="300" border="1" border color = "red" align="center">
+	<tr>
+		<td> &nbsp;message </td>
+		<td>&nbsp;<textarea rows="12" cols="60">개인적으로 궁금한 사항과 함께 핸드폰 번호를 적어주세요</textarea></td>
+	</tr>
+	<tr> 
+		<td colspan="2" align="center">
+		<input type="button" value="등록하기" onClick="nine()" >&nbsp;&nbsp;
+		<input type="reset" value="취소하기"></td>
+	</tr>
+	</table>
+	</form>
+
+            <script language="javascript">
+	function nine()
+	{
+	alert( strName+"님 접수가 완료되었습니다. 곧 문자가 가겠습니다!"); 
+	}
+            </script>
+ 
+</body>
+</html>

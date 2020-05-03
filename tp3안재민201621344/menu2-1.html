@@ -1,0 +1,64 @@
+<HTML>
+<head>	
+<STYLE TYPE = "TEXT/CSS">
+BODY
+{ 
+            background-image: url("1a.jpg");
+  	background-repeat: repeat;
+	background-position: 50% 50%;
+	margin-top: 80;
+	font-size: 250%; color: #81F7BE; font-weight: bold; font-style: oblique;
+	text-align: center; line-height: 110%
+}
+</STYLE>
+
+	<SCRIPT LANGUAGE="JavaScript">
+		
+
+		function x()
+		{
+			if(backImg.style.pixelWidth < 880) 	
+                                    {
+				backImg.style.pixelWidth += 5;
+				backImg.style.pixelHeight += 1; 
+				setTimeout("x()",10); 
+			}
+		}
+		function theDate()
+                        {
+			today = new Date();
+			document.write(today.getFullYear(),"년 ", today.getMonth()+1,"월 ", today.getDate(),"일&nbsp;&nbsp;&nbsp;&nbsp;  ");
+			document.write(today.getHours(),"시 ", today.getMinutes()+1,"분 ", today.getSeconds(),"초" );
+		}
+
+
+                       var rate = 1000;
+		
+		var Color1 = "#FF0000";
+		var Color2 = "#F4FA58";
+
+		var i=0;
+		
+		function LinkColor()
+                        {
+    		     i++;
+		     if (i==1) C = Color1;
+ 		     if (i==2) C = Color2;
+           
+		      BannerLink.style.color=C;
+		      if (i > 1) i = 0;
+		      setTimeout("LinkColor()", rate);    
+		}
+		
+	</SCRIPT> 
+
+</head>
+
+<BODY onLoad = "x(), LinkColor()">
+<p id = "BannerLink">인생 변화의 시작점</p>
+<script language="JavaScript">
+theDate();
+</script><br><br>
+<IMG SRC = "picture.png" border = "1" ID="backImg" align = "center">
+</BODY>
+</HTML>
